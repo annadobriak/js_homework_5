@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 13</h1>
+    <p>
+      Морський бій. Комп’ютер випадково розташовує одиночний корабель на полі
+      розміром N*M. Маючи К снарядів користувач намагається потопити корабель.
+    </p>
+
+    <script>
+      // 1.Введення необхідних даних
+      const fieldSizeCoordinateN = parseInt(
+        prompt(
+          "Вказуємо розмір ігрового поля. Введіть максимальне значення по оси Х",
+          "0"
+        )
+      )
+      const fieldSizeCoordinateM = parseInt(
+        prompt(
+          "Вказуємо розмір ігрового поля. Введіть максимальне значення по оси Y",
+          "0"
+        )
+      )
+
+      // 2.Обчислення результату
+      // 3.Виведення результату
+      const shipСoordinatesN =
+        1 + Math.floor(Math.random() * fieldSizeCoordinateN)
+      const shipСoordinatesM =
+        1 + Math.floor(Math.random() * fieldSizeCoordinateM)
+      const numberAttempts = parseInt(prompt("Вкажіть кількість снарядів", "0"))
+
+      for (let i = 0; i < numberAttempts; i++) {
+        const shipСoordinatesUserN = parseInt(
+          prompt("Вкажіть передбачувані координати по оси Х", "0")
+        )
+        const shipСoordinatesUserM = parseInt(
+          prompt("Вкажіть передбачувані координати по оси Y", "0")
+        )
+        if (
+          shipСoordinatesUserN === shipСoordinatesN &&
+          shipСoordinatesUserM === shipСoordinatesM
+        ) {
+          alert("Ви перемогли! Корабель затонув!")
+        } else alert("Спробуйте ще...")
+      }
+      alert("Спроби закінились!")
+    </script>
+  </body>
+</html>

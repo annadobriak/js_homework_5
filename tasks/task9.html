@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 9</h1>
+    <p>
+      Користувач загадує число. Комп’ютер задає питання поки не вгадає число
+      користувача (використати confirm).
+    </p>
+
+    <script>
+      // 1.Введення необхідних даних
+      let userRandomNumber = parseInt(
+        prompt("Введіть ціле число в інтервалі від 1 до 10", "0")
+      )
+      let answerConfirm
+      // 2.Обчислення результату
+      do {
+        let compRandNumb = Math.floor(Math.random() * 10)
+        answerConfirm = confirm(`Ваше число ${compRandNumb}`)
+      } while (answerConfirm === false)
+
+      // 3.Виведення результату
+      document.write(`Число вгадане! Гра закінчилась!`)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 11</h1>
+    <p>
+      Знайти суму 5 непарних чисел, що знаходяться між заданими користувачем
+      числами.
+    </p>
+
+    <script>
+      // 1.Введення необхідних даних
+      const intervalStartNumb = parseInt(
+        prompt("Введіть початкове значення інтервалу", "1")
+      )
+      const intervalEndNumb = parseInt(
+        prompt("Введіть кінцеве значення інтервалу", "10")
+      )
+
+      let firstOddNumb,
+        oddNumbSum = 0,
+        numbOddNumbers = 1
+
+      // 2.Обчислення результату
+      if (intervalStartNumb % 2 !== 0) firstOddNumb = intervalStartNumb
+      else firstOddNumb = intervalStartNumb + 1
+
+      for (
+        let i = firstOddNumb;
+        i <= intervalEndNumb && numbOddNumbers <= 5;
+        i += 2
+      ) {
+        oddNumbSum += i
+        numbOddNumbers++
+      }
+
+      // 3.Виведення результату
+      document.write(
+        `Сумма перших 5 непарних чисел в заданому інтервалі дорівнює ${oddNumbSum}`
+      )
+    </script>
+  </body>
+</html>

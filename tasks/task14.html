@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 14</h1>
+    <p>
+      Каса. Користувачу повідомляють суму, яку йому треба сплатити. Користувач
+      поступово вводить суму грошей до тих пір, поки суми не буде достатньо для
+      оплати товарів (кожного разу користувачу повідомляють, яку ще суму
+      потрібно ввести).
+    </p>
+
+    <script>
+      // 1.Введення необхідних даних
+      let totalPrice = Math.floor(Math.random() * 100)
+      let sumUser
+
+      // 2.Обчислення результату
+      // 3.Виведення результату
+      alert(`Сумма Вашої покупки складає ${totalPrice}`)
+      do {
+        sumUser = parseInt(
+          prompt(`Внесить ${totalPrice} грн для оплати товару `, "0")
+        )
+        if (sumUser <= totalPrice) {
+          totalPrice -= sumUser
+          alert(`Внесено ${sumUser} грн, не вистачає ${totalPrice} грн`)
+        } else alert(`Термінал решту не видає, введіть ${totalPrice} грн`)
+      } while (totalPrice > 0)
+
+      alert("Ваша покупка оплачена")
+    </script>
+  </body>
+</html>
